@@ -1,29 +1,26 @@
-.blue {
-  background-color: blue;
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
 }
 
 .yellow {
   background-color: yellow;
 }
 
-.red {
-  background-color: red;
-}
-
 .green {
   background-color: green;
 }
 
-.blue {
-  background-color: blue;
-}
-
-.orange {
-  background-color: blue;
-}
-
 .cyan {
   background-color: cyan;
+}
+
+.blue {
+  background-color: blue;
 }
 
 .purple {
@@ -36,4 +33,12 @@
 
 .white {
   background-color: white;
+}
+
+.slate{
+  background-color: slategrey;
+}
+
+.table{
+  margin-top: 20px;
 }
