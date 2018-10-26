@@ -29,41 +29,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Color Selector interactivity
   let pickedColor = "White"
-  let red = document.getElementById("red")
-  red.addEventListener("click", function(event){
-    pickedColor="red"
-  });
-  let orange = document.getElementById("orange")
-  orange.addEventListener("click", function(event){
-    pickedColor="orange"
-  });
-  let yellow = document.getElementById("yellow")
-  yellow.addEventListener("click", function(event){
-    pickedColor="yellow"
-  });
-  let green = document.getElementById("green")
-  green.addEventListener("click", function(event){
-    pickedColor="green"
-  });
-  let cyan = document.getElementById("cyan")
-  cyan.addEventListener("click", function(event){
-    pickedColor="cyan"
-  });
-  let blue = document.getElementById("blue")
-  blue.addEventListener("click", function(event){
-    pickedColor="blue"
-  });
-  let purple = document.getElementById("purple")
-  purple.addEventListener("click", function(event){
-    pickedColor="purple"
-  });let black = document.getElementById("black")
-  black.addEventListener("click", function(event){
-    pickedColor="black"
-  });let white = document.getElementById("white")
-  white.addEventListener("click", function(event){
-    pickedColor="white"
-  });
-
+  let colors = ["red","orange","yellow","green","cyan","blue","purple","black","white"]
+  for(let color = 0; color<colors.length;color++) {
+    let currentColor =  document.createElement("div")
+    currentColor.style.height = "30px"
+    currentColor.style.width = "150px"
+    currentColor.style.margin = "0 auto"
+    currentColor.classList = colors[color]
+    currentColor.addEventListener("click", function(event){
+      pickedColor = colors[color]
+    });
+    document.querySelector("#palette").appendChild(currentColor)
+  }
   // Change pixels when clicked
   function changePixelColor(pixelToChange){
     pixelToChange.classList = pickedColor
